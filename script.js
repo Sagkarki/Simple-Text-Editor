@@ -12,7 +12,8 @@
  */
  function updateText(){
     // CODE GOES HERE
-  }
+    console.log("working")
+}
   
   /**
    * Toggle the bold class for the output text
@@ -49,4 +50,4 @@
    */
   function alignText(elem, alignType){
     // CODE GOES HERE
-  }
+  } 
