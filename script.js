@@ -12,7 +12,8 @@
  */
  function updateText(){
     // CODE GOES HERE
-    console.log("working")
+    let text= document.getElementById('text-input').value;
+    document.getElementById('text-output').innerText = text;
 }
   
   /**
