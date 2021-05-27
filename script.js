@@ -29,20 +29,13 @@
     document.getElementById('text-output').classList.toggle('bold');
   }
   
-  /**
-   * Toggle the italic class for the output text
-   */
+  
   function makeItalic(elem){
      elem.classList.toggle('active');
      document.getElementById('text-output').classList.toggle('italic');
   }
   
-  /**
-   * Toggle the underline class for the output text
-   * HINT: Toggle the .active class for the button
-   * HINT: Use the classList property
-   * HINT: Use contains, remove, and add functions
-   */
+  
   function makeUnderline(elem){
       
       elem.classList.toggle('active');
@@ -54,12 +47,28 @@
       }
   }
   
-  /**
-   * Toggle the style textAlign attribute
-   * Toggle the active state for the align butttons
-   * HINT: Use the style property of the element
-   * HINT: Make sure to untoggle the active state for all other align buttons
-   */
+function makeSmall(elem){
+    elem.classList.toggle('active');
+    document.getElementById('text-output').classList.toggle('small');
+}
+
+function makeMedium(elem){
+    elem.classList.toggle('active');
+    document.getElementById('text-output').classList.toggle('medium');
+}
+
+function makeLarge(elem){
+    elem.classList.toggle('active');
+    document.getElementById('text-output').classList.toggle('large');
+}
+
+
+function makeRed(elem){
+    document.getElementById("Large").classList.remove('active');
+    elem.classList.toggle('active');
+    document.getElementById('text-output').classList.toggle('red');
+}
+  
   function alignText(elem, alignType){
     
     document.getElementById('text-output').style.textAlign=alignType;
@@ -69,3 +78,11 @@
     }
     elem.classList.add('active');
 } 
+function addColor(elem, colorType){
+    document.getElementById('text-output').style.color = colorType;
+    let buttonsList = document.getElementsByClassName("color");
+    for(let i=0; i<buttonsList.length; i++){
+        buttonsList[i].classList.remove('active');
+    }
+    elem.classList.add('active');
+}

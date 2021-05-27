@@ -26,5 +26,16 @@
   .underline {
     text-decoration: underline;
   }
-  
+  .small{
+    font-size: smaller;
+  }
+  .medium{
+    font-size: medium;
+  }
+  .large{
+    font-size: larger;
+  }
+  .color{
+    background-color: red;
+  }
   
