@@ -48,28 +48,43 @@
   }
   
 function makeSmall(elem){
+   
     elem.classList.toggle('active');
-    document.getElementById('text-output').classList.toggle('small');
+    let className = document.getElementById("text-output").classList.value;
+
+  if (className.includes('small')) {
+    document.getElementById("text-output").classList.remove('small');
+  } else {
+    document.getElementById("text-output").classList.remove('large', 'medium');
+    document.getElementById("text-output").classList.add('small');
+  }    
 }
 
 function makeMedium(elem){
     elem.classList.toggle('active');
-    document.getElementById('text-output').classList.toggle('medium');
+    let className = document.getElementById("text-output").classList.value;
+
+    if (className.includes("medium")) {
+        document.getElementById("text-output").classList.remove('medium');
+      } else {
+        document.getElementById("text-output").classList.remove('large', 'small');
+        document.getElementById("text-output").classList.add('medium');
+      }    
 }
 
 function makeLarge(elem){
     elem.classList.toggle('active');
-    document.getElementById('text-output').classList.toggle('large');
+    let className = document.getElementById("text-output").classList.value;
+
+    if (className.includes('large')) {
+        document.getElementById("text-output").classList.remove('large');
+      } else {
+        document.getElementById("text-output").classList.remove('small', 'medium');
+        document.getElementById("text-output").classList.add('large');
+      }    
 }
 
-
-function makeRed(elem){
-    document.getElementById("Large").classList.remove('active');
-    elem.classList.toggle('active');
-    document.getElementById('text-output').classList.toggle('red');
-}
-  
-  function alignText(elem, alignType){
+function alignText(elem, alignType){
     
     document.getElementById('text-output').style.textAlign=alignType;
     let buttonsList = document.getElementsByClassName('align');
@@ -78,6 +93,7 @@ function makeRed(elem){
     }
     elem.classList.add('active');
 } 
+
 function addColor(elem, colorType){
     document.getElementById('text-output').style.color = colorType;
     let buttonsList = document.getElementsByClassName("color");
@@ -85,4 +101,5 @@ function addColor(elem, colorType){
         buttonsList[i].classList.remove('active');
     }
     elem.classList.add('active');
+
 }

@@ -30,12 +30,9 @@
     font-size: smaller;
   }
   .medium{
-    font-size: medium;
-  }
-  .large{
     font-size: larger;
   }
-  .color{
-    background-color: red;
+  .large{
+    font-size: x-large;
   }
   
